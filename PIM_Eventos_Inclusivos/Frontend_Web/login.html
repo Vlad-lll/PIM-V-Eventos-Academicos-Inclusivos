@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de Acesso</title>
+    <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .formulario-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+            margin: 40px auto;
+        }
+        .input-grupo {
+            margin-bottom: 15px;
+        }
+        .input-grupo label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333333;
+        }
+        .input-grupo input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .btn-principal {
+            width: 100%;
+            padding: 12px;
+            background-color: #5c2092;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-principal:hover {
+            background-color: #4a1975;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Acesso ao Portal</h1>
+        <p>Insira suas credenciais para continuar</p>
+    </header>
+    <main class="container">
+        <div class="formulario-box">
+            <form action="area_participante.html">
+                <div class="input-grupo">
+                    <label for="nome">Como prefere ser chamado?</label>
+                    <input type="text" id="nome" placeholder="Ex: Guilherme" required>
+                </div>
+                <div class="input-grupo">
+                    <label for="email">Email Acadêmico</label>
+                    <input type="email" id="email" placeholder="nome@dominio.com" required>
+                </div>
+                <div class="input-grupo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha" required>
+                </div>
+                <button type="submit" class="btn-principal">Entrar no Sistema</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function() {
+            let nomeDigitado = document.getElementById('nome').value;
+            localStorage.setItem('nomeUsuario', nomeDigitado);
+        });
+    </script>
+</body>
+</html>

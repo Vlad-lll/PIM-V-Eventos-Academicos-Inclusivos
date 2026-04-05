@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Participante</title>
+    <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+        <div style="text-align: left;">
+            <h1 style="margin: 0;">Minha Área</h1>
+            <p style="margin: 0; padding-top: 5px;">Bem-vindo, <span id="nomeExibicao">Participante</span>. Gerencie suas atividades e perfil.</p>
+        </div>
+        <div style="display: flex; gap: 10px;">
+            <a href="index.html" style="background-color: white; color: #5c2092; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-weight: bold;">Ver mais Eventos</a>
+            <a href="login.html" style="background-color: transparent; border: 1px solid white; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-weight: bold;">Sair</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card-evento">
+            <h2>Minhas Inscrições</h2>
+            <ul>
+                <li>Simpósio de Cibersegurança</li>
+            </ul>
+        </section>
+
+        <section class="card-evento">
+            <h2>Meus Certificados</h2>
+            <p>Nenhum certificado disponível no momento.</p>
+        </section>
+
+        <section class="card-evento">
+            <h2>Acessibilidade e Libras</h2>
+            <p>Configure suas preferências de suporte bilíngue.</p>
+        </section>
+
+        <section class="card-evento">
+            <h2>Materiais de Apoio</h2>
+            <p>Baixe os slides e artigos das palestras confirmadas.</p>
+        </section>
+
+        <section class="card-evento">
+            <h2>Fórum de Discussão</h2>
+            <p>Interaja com outros participantes e palestrantes do evento.</p>
+        </section>
+
+        <section class="card-evento">
+            <h2>Notificações</h2>
+            <p>Você possui um novo aviso sobre a mudança de horários.</p>
+        </section>
+
+        <section class="card-evento">
+            <h2>Contato com a Organização</h2>
+            <p>Envie suas dúvidas para a nossa equipe de suporte.</p>
+        </section>
+
+        <section class="card-evento">
+            <h2>Configurações da Conta</h2>
+            <p>Altere sua senha, foto e dados pessoais.</p>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let nomeSalvo = localStorage.getItem("nomeUsuario");
+            let nomeElemento = document.getElementById("nomeExibicao");
+
+            if (nomeSalvo) {
+                nomeElemento.textContent = nomeSalvo.charAt(0).toUpperCase() + nomeSalvo.slice(1);
+            }
+        });
+    </script>
+</body>
+</html>

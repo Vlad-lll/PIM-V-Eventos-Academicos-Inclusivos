@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição em Palestras</title>
+    <link rel="icon" href="https://img.icons8.com/fluency/48/graduation-cap.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .formulario-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+            margin: 40px auto;
+        }
+        .input-grupo {
+            margin-bottom: 15px;
+        }
+        .input-grupo label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333333;
+        }
+        .input-grupo select, .input-grupo input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .btn-principal {
+            width: 100%;
+            padding: 12px;
+            background-color: #5c2092;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-principal:hover {
+            background-color: #4a1975;
+        }
+    </style>
+</head>
+<body>
+    <header style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+        <div style="text-align: left;">
+            <h1 style="margin: 0;">Garantir Vaga</h1>
+            <p style="margin: 0; padding-top: 5px;">Selecione a atividade de seu interesse</p>
+        </div>
+        <div>
+            <a href="index.html" style="background-color: transparent; border: 1px solid white; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; font-weight: bold;">Voltar ao Início</a>
+        </div>
+    </header>
+    <main class="container">
+        <div class="formulario-box">
+            <form action="area_participante.html">
+                <div class="input-grupo">
+                    <label for="nomeInscricao">Seu Nome para o Certificado</label>
+                    <input type="text" id="nomeInscricao" placeholder="Ex: Guilherme" required>
+                </div>
+                <div class="input-grupo">
+                    <label for="palestra">Atividade Desejada</label>
+                    <select id="palestra" required>
+                        <option value="">Escolha uma opção...</option>
+                        <option value="1">Simpósio de Cibersegurança</option>
+                        <option value="2">Workshop de Cloud Computing</option>
+                        <option value="3">Minicurso de ERP e Protheus</option>
+                        <option value="4">Desenvolvimento de Jogos</option>
+                        <option value="5">Seminário de Inteligência Artificial</option>
+                    </select>
+                </div>
+                <div class="input-grupo">
+                    <label for="necessidade">Necessita de intérprete de Libras?</label>
+                    <select id="necessidade" required>
+                        <option value="nao">Não</option>
+                        <option value="sim">Sim</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-principal">Confirmar Inscrição</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function() {
+            let nomeDigitado = document.getElementById('nomeInscricao').value;
+            localStorage.setItem('nomeUsuario', nomeDigitado);
+        });
+    </script>
+</body>
+</html>
