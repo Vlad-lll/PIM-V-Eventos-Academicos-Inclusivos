@@ -1,6 +1,24 @@
-Status do Projeto
-Front-end: Telas de Home, Login e Inscrição concluídas e responsivas.
+Repositório destinado ao desenvolvimento do Projeto Integrado Multidisciplinar V (CST em Análise e Desenvolvimento de Sistemas).
 
-Back-end: Estrutura de classes (POO) e serviços básicos em C# configurados.
+🚀 Status da Entrega Técnica
+Front-end Responsivo: Telas de Home (Index), Login, Inscrição e Área do Participante concluídas com suporte a ícone e navegação fluida.
 
-Pendências: Integração das telas com a lógica C#, persistência em banco de dados e redação do documento ABNT (15 a 20 páginas)[cite: 2].
+Back-end em C#: Modelagem de classes (Usuario, Evento, Atividade) com uso de herança, encapsulamento e coleções genéricas finalizada.
+
+Acessibilidade: Interface preparada para inclusão de recursos em Libras e captura de necessidades específicas de usuários surdos.
+
+📝 Documentação (PIM V)
+Já adiantei a estrutura do documento Word conforme as normas da ABNT, incluindo:
+
+Resumo e Abstract técnicos.
+
+Introdução e Conclusão alinhadas aos objetivos do PIM.
+
+Fundamentação teórica das disciplinas de POO, Web Responsivo, Libras e Comunicação.
+
+🛠️ Próximos Passos (Pendências para o Grupo)
+Integração C#: Conectar a inteligência do back-end às rotas do front-end.
+
+Persistência: Implementar salvamento em banco de dados ou arquivos.
+
+Prints e Finalização: Capturar as telas do sistema para anexar ao documento (mínimo 15 e máximo 20 páginas no total).
