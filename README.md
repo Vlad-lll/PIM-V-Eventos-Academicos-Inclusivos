@@ -19,6 +19,4 @@ Fundamentação teórica das disciplinas de POO, Web Responsivo, Libras e Comuni
 🛠️ Próximos Passos (Pendências para o Grupo)
 Integração C#: Conectar a inteligência do back-end às rotas do front-end.
 
-Persistência: Implementar salvamento em banco de dados ou arquivos.
-
 Prints e Finalização: Capturar as telas do sistema para anexar ao documento (mínimo 15 e máximo 20 páginas no total).
